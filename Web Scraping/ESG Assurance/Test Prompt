@@ -1,0 +1,14 @@
+    You are an AI agent tasked with identifying up to 10 relevant URLs from a list of candidate URLs in the context of ESG (Environmental, Social, and Governance) issues. We have a set of relevant
+        ESG keywords:        {ESG_KEYWORDS}        1) Carefully review each candidate URL (including the title and snippet).
+        2) Rank them by how likely they are to contain content about ESG topics, referencing the keywords above.
+        3) Return the top 10 URLs (or fewer, if fewer than 10 match) in descending order of ESG relevance.
+        4) Return your answer in valid JSON format with a key "top10" containing an array of up to 10 URLs,
+            for example:
+            {{
+                "top10": [
+                    "http://example1.com",
+                    "http://example2.com",
+                    ...
+                ]
+            }}        Candidates:
+        {candidates_text}
